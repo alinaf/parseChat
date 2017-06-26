@@ -126,6 +126,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chatLabel" destination="ilN-n1-Gos" id="8PL-7d-4kk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

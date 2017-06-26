@@ -15,6 +15,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var chatMessageField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    var chats: [PFObject]?
     
     @IBAction func didPressSend(_ sender: Any) {
         
@@ -31,14 +32,30 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    func onTimer(){
+        //query
+        var query = PFQuery(className: "Message_fbu2017")
+        query.addDescendingOrder("createdAt")
+        query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if error == nil {
+                self.chats = posts
+                self.tableView.reloadData()
+            } else {
+                print(error)
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return chats?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatCell
         
-        
+        let chat = chats![indexPath.row]
+        let text = chat["text"] as! String
+        cell.chatLabel.text = text
         
         
         return cell
@@ -50,6 +67,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         
         tableView.dataSource = self
+        
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view.
     }
 

@@ -9,7 +9,10 @@
 import UIKit
 
 class ChatCell: UITableViewCell {
-
+    
+    //Variables
+    @IBOutlet weak var chatLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
