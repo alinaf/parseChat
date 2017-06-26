@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration) in
-            configuration.applicationID = "parseChatID"
+            configuration.applicationId = "parseChatID"
             configuration.server = "https://blooming-thicket-89345.herokuapp.com/parse"
         }))
         

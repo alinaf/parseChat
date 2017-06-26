@@ -7,9 +7,32 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController {
+    
+    //Outlets
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
 
+    @IBAction func clickedSignUp(_ sender: UIButton) {
+        let newUser = PFUser()
+        
+        newUser.username = usernameTextField.text
+        //newUser.email = emailTextField.text
+        newUser.password = passwordTextField.text
+        
+        
+        
+    }
+    
+    
+    @IBAction func clickedLogin(_ sender: Any) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
