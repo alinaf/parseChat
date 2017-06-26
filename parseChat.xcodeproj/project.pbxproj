@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		280A22AD7441E1CB82EEF770 /* Pods_parseChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D9E6AE528E0D1B46EB486E /* Pods_parseChat.framework */; };
+		495A8FA71F01B2BB00B2736A /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495A8FA61F01B2BB00B2736A /* ChatCell.swift */; };
 		61F9AE001C6300D51B534485 /* Pods_parseChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5345E50391B63DDBB4333557 /* Pods_parseChatTests.framework */; };
 		C823EC4AB1DC557346234EA2 /* Pods_parseChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147DAB6041DEF17848385E8B /* Pods_parseChatUITests.framework */; };
 		CD13D8981F018921003738C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13D8971F018921003738C2 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 		147DAB6041DEF17848385E8B /* Pods_parseChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_parseChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E576FE562222182B81DAF22 /* Pods-parseChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parseChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-parseChat/Pods-parseChat.release.xcconfig"; sourceTree = "<group>"; };
 		2E7D080B55CF52B16E39A8BD /* Pods-parseChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parseChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-parseChatUITests/Pods-parseChatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		495A8FA61F01B2BB00B2736A /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		5345E50391B63DDBB4333557 /* Pods_parseChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_parseChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6542DA3EB951AF1AD4B4DFA1 /* Pods-parseChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parseChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-parseChatUITests/Pods-parseChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		788D6D12B159667E149F5845 /* Pods-parseChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parseChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-parseChatTests/Pods-parseChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				CD13D89E1F018921003738C2 /* Assets.xcassets */,
 				CD13D8A01F018921003738C2 /* LaunchScreen.storyboard */,
 				CD13D8A31F018921003738C2 /* Info.plist */,
+				495A8FA61F01B2BB00B2736A /* ChatCell.swift */,
 			);
 			path = parseChat;
 			sourceTree = "<group>";
@@ -245,7 +248,7 @@
 				TargetAttributes = {
 					CD13D8931F018921003738C2 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8LG7U9WDJC;
+						DevelopmentTeam = 5JTWQYEJ7H;
 						ProvisioningStyle = Automatic;
 					};
 					CD13D8A71F018921003738C2 = {
@@ -451,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD13D89A1F018921003738C2 /* ViewController.swift in Sources */,
+				495A8FA71F01B2BB00B2736A /* ChatCell.swift in Sources */,
 				CD3C300B1F01AECC0060BE72 /* ChatViewController.swift in Sources */,
 				CD13D8981F018921003738C2 /* AppDelegate.swift in Sources */,
 			);
@@ -605,10 +609,10 @@
 			baseConfigurationReference = C8CF169E61EFE557B4D5ED94 /* Pods-parseChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8LG7U9WDJC;
+				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
 				INFOPLIST_FILE = parseChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alina.parseChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -619,10 +623,10 @@
 			baseConfigurationReference = 1E576FE562222182B81DAF22 /* Pods-parseChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8LG7U9WDJC;
+				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
 				INFOPLIST_FILE = parseChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alina.parseChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
