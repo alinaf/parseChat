@@ -46,7 +46,7 @@ class ViewController: UIViewController {
                     print(error.localizedDescription)
                 } else {
                     print("Sign Up Successful!")
-                    
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 }
             }
         }
@@ -69,6 +69,7 @@ class ViewController: UIViewController {
                 print("User Login Failed: \(error.localizedDescription)")
             } else {
                 print("User Login Successful!")
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 }
             }
         }
