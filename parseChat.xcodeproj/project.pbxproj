@@ -248,7 +248,7 @@
 				TargetAttributes = {
 					CD13D8931F018921003738C2 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 5JTWQYEJ7H;
+						DevelopmentTeam = 8LG7U9WDJC;
 						ProvisioningStyle = Automatic;
 					};
 					CD13D8A71F018921003738C2 = {
@@ -609,10 +609,10 @@
 			baseConfigurationReference = C8CF169E61EFE557B4D5ED94 /* Pods-parseChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
+				DEVELOPMENT_TEAM = 8LG7U9WDJC;
 				INFOPLIST_FILE = parseChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinaAbidi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -623,10 +623,10 @@
 			baseConfigurationReference = 1E576FE562222182B81DAF22 /* Pods-parseChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
+				DEVELOPMENT_TEAM = 8LG7U9WDJC;
 				INFOPLIST_FILE = parseChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinaAbidi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
