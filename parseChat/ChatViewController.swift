@@ -11,8 +11,9 @@ import Parse
 
 class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    // Variables
+    // Outlets/Actions
     
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var chatMessageField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     var chats: [PFObject]?
@@ -21,6 +22,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let chatMessage = PFObject(className: "Message_fbu2017")
         chatMessage["text"] = chatMessageField.text ?? ""
+        chatMessage["user"] = PFUser.current()
         
         chatMessage.saveInBackground { (success, error) in
             if success {
@@ -35,6 +37,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func onTimer(){
         //query
         var query = PFQuery(className: "Message_fbu2017")
+        query.includeKey("user")
         query.addDescendingOrder("createdAt")
         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
             if error == nil {
@@ -55,7 +58,14 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let chat = chats![indexPath.row]
         let text = chat["text"] as! String
+        
+        if let user = chat["user"] as? PFUser {
+            cell.usernameLabel.text = user.username
+        } else {
+            cell.usernameLabel.text = "Guest"}
+        
         cell.chatLabel.text = text
+        
         
         
         return cell

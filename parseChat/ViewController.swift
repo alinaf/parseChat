@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         } else {
             let newUser = PFUser()
             
+            
             newUser.username = usernameTextField.text
             //newUser.email = emailTextField.text
             newUser.password = passwordTextField.text
